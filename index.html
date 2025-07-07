@@ -1,10 +1,12 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panel de Administración</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" defer></script> <!-- Aquí irá tu JS SPA -->
 </head>
 <body>
   <div class="container">
@@ -13,45 +15,27 @@
       <h2 class="logo">Admin</h2>
       <nav>
         <ul>
-          <li><a href="#" class="active">Usuarios</a></li>
-          <li><a href="#">Configuración</a></li>
+          <li><a href="#" id="navUsers" class="active">Usuarios</a></li>
+          <li><a href="#" id="navSettings">Configuración</a></li>
         </ul>
       </nav>
     </aside>
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Header -->
       <header class="header">
-        <h1>Panel de Usuarios</h1>
+        <h1 id="pageTitle">Panel de Usuarios</h1>
         <div class="admin-info">
           <span class="admin-name">Administrador</span>
         </div>
       </header>
 
-      <!-- Botón nuevo usuario -->
       <div class="actions">
         <button id="btnAddUser" class="btn-primary">+ Nuevo Usuario</button>
       </div>
 
-      <!-- Tabla de usuarios -->
-      <section class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Teléfono</th>
-              <th>Matrícula</th>
-              <th>Fecha de Ingreso</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="userTableBody">
-            <!-- Los usuarios se insertarán dinámicamente aquí -->
-          </tbody>
-        </table>
-      </section>
+      <!-- Contenedor donde se cargará la tabla u otros contenidos -->
+      <div id="content"></div>
     </main>
   </div>
 </body>
