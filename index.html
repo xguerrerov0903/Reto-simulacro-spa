@@ -1,27 +1,23 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Panel de Administración</title>
+  <title>Panel de Administración SPA</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/app.js" defer></script> <!-- Aquí irá tu JS SPA -->
+  <script type="module" src="/script.js"></script>
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
     <aside class="sidebar">
       <h2 class="logo">Admin</h2>
       <nav>
         <ul>
-          <li><a href="#" id="navUsers" class="active">Usuarios</a></li>
+          <li><a href="/users" data-link class="active">Usuarios</a></li>
           <li><a href="#" id="navSettings">Configuración</a></li>
         </ul>
       </nav>
     </aside>
-
-    <!-- Main Content -->
     <main class="main-content">
       <header class="header">
         <h1 id="pageTitle">Panel de Usuarios</h1>
@@ -29,12 +25,9 @@
           <span class="admin-name">Administrador</span>
         </div>
       </header>
-
       <div class="actions">
         <button id="btnAddUser" class="btn-primary">+ Nuevo Usuario</button>
       </div>
-
-      <!-- Contenedor donde se cargará la tabla u otros contenidos -->
       <div id="content"></div>
     </main>
   </div>

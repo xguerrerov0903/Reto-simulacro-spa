@@ -1,0 +1,27 @@
+{
+  "name": "reto-spa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crismiau/Reto-SPA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crismiau/Reto-SPA/issues"
+  },
+  "homepage": "https://github.com/Crismiau/Reto-SPA#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.0.2"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

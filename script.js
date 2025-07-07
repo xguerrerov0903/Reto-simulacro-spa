@@ -1,0 +1,33 @@
+const routes = {
+  "/": "/users.html",
+  "/users": "/users.html",
+};
+
+
+document.body.addEventListener("click", (e) => {
+  if (e.target.matches("[data-link]")) {
+    e.preventDefault();
+    navigate(e.target.getAttribute("href"));
+  }
+});
+
+async function navigate(pathname) {
+  const route = routes[pathname];
+  const html = await fetch(route).then((res) => res.text());
+  document.getElementById("content").innerHTML = html;
+  history.pushState({}, "", pathname);
+
+  // 🚩 Ejecutar tu inicializador aquí después de cargar la vista
+  if (pathname === "/" || pathname === "/users") {
+    import("./js/form.js").then(module => {
+      module.inicializarFormularioUsuarios(); // Llama a tu función de inicialización
+    });
+  }
+}
+
+
+window.addEventListener("popstate", () =>
+  navigate(location.pathname)
+);
+
+navigate(location.pathname);
