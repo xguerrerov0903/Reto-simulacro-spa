@@ -1,6 +1,7 @@
 const routes = {
   "/": "/users.html",
   "/users": "/users.html",
+  "/new-users": "/new-users.html",
 };
 
 
@@ -20,7 +21,7 @@ async function navigate(pathname) {
   // 🚩 Ejecutar tu inicializador aquí después de cargar la vista
   if (pathname === "/" || pathname === "/users") {
     import("./js/form.js").then(module => {
-      module.inicializarFormularioUsuarios(); // Llama a tu función de inicialización
+      module.loadUsers(); // Llama a tu función de inicialización
     });
   }
 }
