@@ -49,7 +49,7 @@ export async function post(url, body) {
 export async function update(url, id, body) {
   try {
     const response = await fetch(`${url}/${id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
@@ -57,10 +57,10 @@ export async function update(url, id, body) {
     });
 
     const data = await response.json();
-    console.log("PUT actualizado:", data);
+    console.log("PATCH actualizado:", data);
     return data;
   } catch (error) {
-    console.error("Error en PUT:", error);
+    console.error("Error en PATCH:", error);
     throw error;
   }
 }
