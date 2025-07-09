@@ -24,6 +24,12 @@ async function navigate(pathname) {
       module.loadUsers(); // Llama a tu función de inicialización
     });
   }
+
+  if (pathname === "/new-users") {
+    import("./js/new-user.js").then(module => {
+      module.loadUsers(); // Llama a tu función de inicialización
+    });
+  }
 }
 
 

@@ -1,23 +1,22 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "name": "Cristian Camilo Agudelo Foronda",
-            "email": "Heycristian26@gmail.com",
-            "extensionPhone": "+57",
-            "phone": "3135443356",
-            "enrollNumber": "78945612378901",
-            "dateOfAdmission": "2021-12-08"
-        },
-
-        {
-            "id": "2",
-            "name": "Carlos Méndez",
-            "email": "carlos@example.com",
-            "extensionPhone": "+57",
-            "phone": "3123344556",
-            "enrollNumber": "45678912345678",
-            "dateOfAdmission": "2022-05-15"
-        }
-    ]
+  "users": [
+    {
+      "name": "Cristian Camilo Agudelo Foronda",
+      "email": "Heycristian26@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3135443356",
+      "enrollNumber": "78945612378901",
+      "dateOfAdmission": "2021-12-08",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Carlos Méndez",
+      "email": "carlos@example.com",
+      "extensionPhone": "+57",
+      "phone": "3123344556",
+      "enrollNumber": "45678912345678",
+      "dateOfAdmission": "2022-05-15"
+    }
+  ]
 }
