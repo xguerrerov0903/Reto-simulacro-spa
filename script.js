@@ -4,7 +4,6 @@ const routes = {
   "/new-users": "/new-users.html",
 };
 
-
 document.body.addEventListener("click", (e) => {
   if (e.target.matches("[data-link]")) {
     e.preventDefault();
@@ -18,22 +17,21 @@ async function navigate(pathname) {
   document.getElementById("content").innerHTML = html;
   history.pushState({}, "", pathname);
 
-  // 🚩 Ejecutar tu inicializador aquí después de cargar la vista
   if (pathname === "/" || pathname === "/users") {
     import("./js/form.js").then(module => {
-      module.loadUsers(); // Llama a tu función de inicialización
+      module.loadUsers();
     });
   }
 
   if (pathname === "/new-users") {
-    import("./js/new-user.js"); // Se ejecuta automáticamente
+    import("./js/new-user.js");
   }
-
 }
 
+window.addEventListener("popstate", () => navigate(location.pathname));
 
-window.addEventListener("popstate", () =>
-  navigate(location.pathname)
-);
+document.addEventListener("DOMContentLoaded", () => {
+  navigate(location.pathname);
+});
 
-navigate(location.pathname);
+import "./js/login.js";

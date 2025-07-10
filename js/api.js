@@ -6,12 +6,11 @@ app.use(cors()); // 👈 Esto habilita CORS para todas las rutas
 
 // tus rutas */
 
-
 export async function get(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return data
+    return data;
   } catch (error) {
     console.error("Error en GET:", error);
   }
@@ -19,9 +18,9 @@ export async function get(url) {
 
 export async function get_id(url, id) {
   try {
-    const response = await fetch(`${url}/${id}`); 
+    const response = await fetch(`${url}/${id}`);
     const data = await response.json();
-    return data
+    return data;
   } catch (error) {
     console.error("Error en GET:", error);
   }
@@ -32,28 +31,26 @@ export async function post(url, body) {
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(body) 
+      body: JSON.stringify(body),
     });
 
     const data = await response.json();
-    return data
+    return data;
   } catch (error) {
     console.error("Error en POST:", error);
   }
 }
-
-
 
 export async function update(url, id, body) {
   try {
     const response = await fetch(`${url}/${id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(body) // body debe ser un objeto como { title, body, userId }
+      body: JSON.stringify(body), // body debe ser un objeto como { title, body, userId }
     });
 
     const data = await response.json();
@@ -68,7 +65,7 @@ export async function update(url, id, body) {
 export async function deletes(url, id) {
   try {
     const response = await fetch(`${url}/${id}`, {
-      method: "DELETE"
+      method: "DELETE",
     });
 
     if (response.ok) {
