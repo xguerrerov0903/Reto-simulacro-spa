@@ -1,17 +1,6 @@
 {
   "users": [
     {
-      "name": "Cristian Camilo Agudelo Foronda",
-      "email": "Heycristian26@gmail.com",
-      "extensionPhone": "+57",
-      "phone": "3135443356",
-      "enrollNumber": "78945612378901",
-      "dateOfAdmission": "2021-12-08",
-      "id": "1",
-      "pasword": "123",
-      "admin": false
-    },
-    {
       "id": "2",
       "name": "Carlos Méndez",
       "email": "carlos@example.com",
@@ -89,11 +78,6 @@
       "id": 4,
       "userId": "5",
       "courseId": "3"
-    },
-    {
-      "id": 5,
-      "userId": "1",
-      "courseId": "4"
     }
   ]
 }

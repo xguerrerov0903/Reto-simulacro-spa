@@ -23,10 +23,6 @@ async function navigate(pathname) {
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (pathname === "/" || pathname === "/users") {
-    if (!user || !user.admin) {
-      alert("Acceso restringido.");
-      return navigate("/my-courses");
-    }
     import("./js/form.js").then(module => {
       module.loadUsers();
     });
