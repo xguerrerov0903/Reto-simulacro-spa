@@ -35,7 +35,7 @@ async function navigate(pathname) {
   if (pathname === "/new-users") {
     if (!user || !user.admin) {
       alert("Solo los administradores pueden acceder a esta sección.");
-      return navigate("/my-courses");
+      return navigate("/users");
     }
     import("./js/new-user.js");
   }
@@ -43,7 +43,7 @@ async function navigate(pathname) {
   if (pathname === "/new-course") {
     if (!user || !user.admin) {
       alert("Solo los administradores pueden acceder a esta sección.");
-      return navigate("/my-courses");
+      return navigate("/users");
     }
     import("./js/new-course.js");
   }
