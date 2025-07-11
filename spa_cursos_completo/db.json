@@ -1,0 +1,35 @@
+
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Visitante",
+      "email": "visitante@correo.com",
+      "password": "visitante123",
+      "role": "visitor"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introducción a JavaScript",
+      "description": "Curso básico de JavaScript",
+      "startDate": "2025-07-10",
+      "duration": "4 semanas"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "courseId": 1
+    }
+  ]
+}
