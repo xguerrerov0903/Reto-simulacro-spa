@@ -52,8 +52,19 @@ function setupUserTableListener() {
       const id = tr.id;
       const action = event.target.value;
       if (action === "delete") {
+        // 1. Elimina inscripciones del curso
+        const enrollments = await get("http://localhost:3000/enrollments");
+        const relatedEnrollments = enrollments.filter(enroll => enroll.courseId == id);
+
+        for (const enroll of relatedEnrollments) {
+            await deletes("http://localhost:3000/enrollments", enroll.id);
+        }
+
+        // 2. Elimina el curso
         await deletes(url, id);
-        location.reload();
+
+        // 3. Refresca la página
+        location.reload();        
       } else if (action === "edit") {
         edit_course(id);
       } else if (action === "save-course") {

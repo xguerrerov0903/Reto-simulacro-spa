@@ -55,7 +55,6 @@
       "pasword": "123",
       "admin": false
     }
-
   ],
   "courses": [
     {
@@ -64,13 +63,6 @@
       "description": "Curso básico de JavaScript",
       "startDate": "2025-07-10",
       "duration": "4 semanas"
-    },
-    {
-      "id": 2,
-      "title": "Fundamentos de HTML y CSS",
-      "description": "Aprende a crear páginas web con HTML5 y CSS3",
-      "startDate": "2025-08-01",
-      "duration": "6 semanas"
     },
     {
       "id": 3,
@@ -86,24 +78,12 @@
       "startDate": "2025-08-20",
       "duration": "3 semanas"
     }
-
-
   ],
   "enrollments": [
     {
       "id": 1,
       "userId": "2",
       "courseId": "1"
-    },
-    {
-      "id": 2,
-      "userId": "1",
-      "courseId": "2"
-    },
-    {
-      "id": 3,
-      "userId": "4",
-      "courseId": "2"
     },
     {
       "id": 4,
@@ -115,6 +95,5 @@
       "userId": "1",
       "courseId": "4"
     }
-
   ]
 }
