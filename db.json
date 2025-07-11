@@ -32,6 +32,89 @@
       "dateOfAdmission": "2022-05-15",
       "pasword": "123",
       "admin": true
+    },
+    {
+      "id": "4",
+      "name": "Laura Torres",
+      "email": "laura.torres@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3112233445",
+      "enrollNumber": "98765432100123",
+      "dateOfAdmission": "2023-01-10",
+      "pasword": "123",
+      "admin": false
+    },
+    {
+      "id": "5",
+      "name": "Julián Pérez",
+      "email": "julian.perez@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3001122334",
+      "enrollNumber": "11223344556677",
+      "dateOfAdmission": "2022-09-22",
+      "pasword": "123",
+      "admin": false
     }
+
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introducción a JavaScript",
+      "description": "Curso básico de JavaScript",
+      "startDate": "2025-07-10",
+      "duration": "4 semanas"
+    },
+    {
+      "id": 2,
+      "title": "Fundamentos de HTML y CSS",
+      "description": "Aprende a crear páginas web con HTML5 y CSS3",
+      "startDate": "2025-08-01",
+      "duration": "6 semanas"
+    },
+    {
+      "id": 3,
+      "title": "Curso de Node.js",
+      "description": "Backend con Node.js, Express y MongoDB",
+      "startDate": "2025-09-15",
+      "duration": "5 semanas"
+    },
+    {
+      "id": 4,
+      "title": "Diseño UX/UI",
+      "description": "Principios de diseño centrado en el usuario",
+      "startDate": "2025-08-20",
+      "duration": "3 semanas"
+    }
+
+
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "userId": "2",
+      "courseId": "1"
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "courseId": "2"
+    },
+    {
+      "id": 3,
+      "userId": "4",
+      "courseId": "2"
+    },
+    {
+      "id": 4,
+      "userId": "5",
+      "courseId": "3"
+    },
+    {
+      "id": 5,
+      "userId": "1",
+      "courseId": "4"
+    }
+
   ]
 }

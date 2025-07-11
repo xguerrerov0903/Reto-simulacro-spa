@@ -62,8 +62,15 @@ function mostrarNombreUsuario(user) {
 
 function controlarPermisos(user) {
   const newUsersLink = document.querySelector('a[href="/new-users"]');
+  const newCourseLink = document.querySelector('a[href="/new-course"]');
+  const myCourseLink = document.querySelector('a[href="/my-courses"]');
   if (!user.admin && newUsersLink) {
     newUsersLink.style.display = "none";
+    newCourseLink.style.display = "none";
+  } else if (!user.admin && newCourseLink) {
+    newCourseLink.style.display = "none";
+  } else if (user.admin && myCourseLink){
+    myCourseLink.style.display = "none";
   }
 }
 
